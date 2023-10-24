@@ -1,0 +1,9 @@
+<div data-controller="notify--notify" data-notify--notify-timeout="<%= @timeout %>">
+  <div data-notify--notify-target="message">
+    <% if flash[:notice] %>
+      <p class="text-green-500 pb-2"><%= flash[:notice] %></p>
+    <% elsif flash[:alert] %>
+      <p class="text-red-400 pb-2"><%= flash[:alert] %></p>
+    <% end %>
+  </div>
+</div>

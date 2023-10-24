@@ -1,0 +1,19 @@
+<h1 class="font-bold text-gray-600 py-2">
+  Edit roles for
+  <span class="text-red-400">
+    <%= @user.email %>
+  </span>
+</h1>
+
+<%= render NotifyComponent.new %>
+
+<%= form_for @user, url: update_roles_user_path(@user), method: :put do |f| %>
+  <% @roles.each do |role| %>
+    <div>
+      <%= check_box_tag "user[role_ids][]", role.id, @user.has_role?(role.name) %>
+      <%= label_tag "user_role_ids_#{role.id}", role.name %>
+    </div>
+  <% end %>
+  <hr class="my-4">
+  <%= f.submit "Update roles", class: "bg-gray-700 text-white py-2 rounded-md w-40 text-sm hover:shadow-md hover:bg-gray-800 active:scale-[.99]" %>
+<% end %>

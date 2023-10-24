@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'admin', to: 'home#admin'
+
+  resources :users, only: %i[index edit update] do
+    member do
+      get 'edit_roles'
+      put 'update_roles'
+    end
+  end
 
   devise_scope :user do
     authenticated :user do

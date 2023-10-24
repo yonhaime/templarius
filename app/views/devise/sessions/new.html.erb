@@ -1,14 +1,11 @@
 <div class="fixed inset-0 flex items-center justify-center bg-gray-100">
   <div class="bg-white shadow-md w-96 py-10 px-5 rounded-md">
-    <div class="">
-      <p class="text-green-500 text-center"><%= notice %></p>
-      <p class="text-red-400 text-center"><%= alert %></p>
+    <div class="text-center">
+      <%= render NotifyComponent.new %>
+      <h1 class="my-4 text-xl text-gray-600 font-bold">
+        Admin Panel
+      </h1>
     </div>
-
-    <h1 class="text-center my-4 text-xl text-gray-600 font-bold">
-      Admin Panel
-    </h1>
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="mb-2">
         <%= f.label :email, class: "text-gray-500" %><br>
