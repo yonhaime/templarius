@@ -1,0 +1,13 @@
+<%- if methods.present? -%>
+class <%= class_name %>Component < ViewComponent::Base
+  def initialize(<%= methods.map { |attr| "#{attr}:" }.join(', ') %>)
+    super
+  <%- for method in methods -%>
+    @<%= method %> = <%= method %>
+  <%- end -%>
+  end
+end
+<%- else -%>
+class <%= class_name %>Component < ViewComponent::Base
+end
+<%- end -%>

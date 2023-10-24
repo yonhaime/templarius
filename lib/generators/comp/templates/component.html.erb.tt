@@ -1,0 +1,3 @@
+<div data-controller="<%= file_name %>--<%= file_name %>">
+  <%= class_name %> Component
+</div>

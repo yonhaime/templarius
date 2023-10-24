@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Templarius</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "application", "data-turbo-track": "reload" %>
+    <%= vite_stylesheet_tag "application","data-turbo-track": "reload" %>
+  </head>
+  <body class="bg-gray-50">
+    <div class="bg-white p-5 rounded-md shadow-sm mx-2 sm:mx-5 mt-3 sm:mt-5 ">
+      <%= yield %>
+    </div>
+  </body>
+</html>

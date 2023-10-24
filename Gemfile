@@ -23,7 +23,7 @@ gem 'vite_rails'
 gem 'turbo-rails'
 
 # A framework for building testable & encapsulated components
-# gem 'view_component'
+gem 'view_component'
 
 # Authentication solution
 # gem 'devise'
@@ -51,7 +51,7 @@ group :development, :test do
   # gem 'faker'
 
   # Preview system for ViewComponents
-  # gem 'lookbook'
+  gem 'lookbook'
 
   # Ruby static code analyzer
   # gem 'rubocop', require: false

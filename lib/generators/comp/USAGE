@@ -1,0 +1,11 @@
+Description:
+    Generate a new Component
+
+Example:
+    bin/rails generate comp [Name]
+
+    This will create:
+        app/components/[Name]/[Name]_component_preview.rb
+        app/components/[Name]/[Name]_component.html.erb
+        app/components/[Name]/[Name]_component.rb
+        app/components/[Name]/[Name]_controller.js
