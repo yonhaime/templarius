@@ -39,16 +39,16 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
 
   # Behaviour Driven Development for Ruby
-  # gem 'rspec-rails'
+  gem 'rspec-rails'
 
   # Browser testing and Automation
-  # gem 'capybara'
+  gem 'capybara'
 
   # Library for setting up test data
-  # gem 'factory_bot_rails'
+  gem 'factory_bot_rails'
 
   # Create dummy data for your tests
-  # gem 'faker'
+  gem 'faker'
 
   # Preview system for ViewComponents
   gem 'lookbook'
