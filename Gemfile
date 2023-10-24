@@ -32,7 +32,7 @@ gem 'devise', github: 'heartcombo/devise'
 gem 'rolify'
 
 # Authorization library
-# gem 'cancancan'
+gem 'cancancan'
 
 group :development, :test do
   # Useful tool for debugging Ruby code

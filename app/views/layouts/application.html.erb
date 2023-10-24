@@ -11,10 +11,18 @@
   </head>
   <body class="bg-gray-50">
     <div class="bg-white flex w-full items-center justify-between h-14 rounded-md shadow-sm">
-      <span class="font-bold text-gray-600 ml-6 text-xl">
-        Admin Panel
-      </span>
-      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "text-gray-600 mr-6" %>
+      <%= link_to 'Admin Panel', '/', class: 'font-bold text-gray-600 ml-6 text-xl' %>
+      <div class="flex items-center">
+        <% if current_user %>
+          <ul class="text-green-500 pr-5">
+            <% current_user.roles.each do |r| %>
+              <li>Role: <%= r.name %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <%= link_to "Admin", admin_path, class: "text-gray-600 mr-6" %>
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "text-gray-600 mr-6" %>
+      </div>
     </div>
   </div>
 
