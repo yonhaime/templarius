@@ -1,0 +1,8 @@
+Description:
+    Generate a new Stimulus Controller
+
+Example:
+    rails generate stimulus [Name]
+
+    This will create:
+        app/frontend/controllers/[Name]_controller.js

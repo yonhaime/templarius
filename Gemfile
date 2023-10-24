@@ -17,10 +17,10 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'bootsnap', require: false
 
 # Modern assets pipeline in Ruby On Rails
-# gem 'vite_rails'
+gem 'vite_rails'
 
 # Building web application without using much JavaScript
-# gem 'turbo-rails'
+gem 'turbo-rails'
 
 # A framework for building testable & encapsulated components
 # gem 'view_component'
