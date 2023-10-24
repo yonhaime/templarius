@@ -29,7 +29,7 @@ gem 'view_component'
 gem 'devise', github: 'heartcombo/devise'
 
 # For roles management
-# gem 'rolify'
+gem 'rolify'
 
 # Authorization library
 # gem 'cancancan'
