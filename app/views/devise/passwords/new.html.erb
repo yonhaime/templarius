@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
+<div class="fixed inset-0 flex items-center justify-center bg-gray-100">
+  <div class="bg-white shadow-md w-96 py-10 px-5 rounded-md">
+    <div class="text-red-400 text-center">
+      <%= render "devise/shared/error_messages", resource: resource %>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <h1 class="text-center my-4 text-xl text-gray-600 font-bold">
+      Forgot your password?
+    </h1>
 
-  <div class="field">
-    <p><%= f.label :email %></p>
-    <p><%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <div class="field">
+        <%= f.label :email, class: "text-gray-500" %><br>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full rounded-md border-gray-300 text-gray-500" %>
+      </div>
+      <div class="py-3">
+        <%= f.submit "Send me instructions", class: "bg-red-500 text-white py-2 rounded-md w-full hover:shadow-md hover:bg-red-600 active:scale-[.99]" %>
+      </div>
+    <% end %>
+
+    <%= link_to new_session_path(resource_name), class: "flex items-center" do %>
+      <%= image_tag 'arrow-left.svg', class: "w-6 py-2" %>
+      <span class="text-gray-500 pl-2">
+        Back
+      </span>
+    <% end %>
+
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me password reset instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

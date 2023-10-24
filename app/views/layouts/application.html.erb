@@ -9,9 +9,17 @@
     <%= vite_javascript_tag "application", "data-turbo-track": "reload" %>
     <%= vite_stylesheet_tag "application", "data-turbo-track": "reload" %>
   </head>
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="bg-gray-50">
+    <div class="bg-white flex w-full items-center justify-between h-14 rounded-md shadow-sm">
+      <span class="font-bold text-gray-600 ml-6 text-xl">
+        Admin Panel
+      </span>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "text-gray-600 mr-6" %>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded-md shadow-sm mx-2 sm:mx-5 mt-3 sm:mt-5 ">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
