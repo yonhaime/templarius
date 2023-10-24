@@ -1,0 +1,34 @@
+# Exclude specific files and folders from RuboCop inspection.
+AllCops:
+  NewCops: enable
+  Exclude:
+    - app/models/role.rb
+    - app/frontend/**/*
+    - bin/**/*
+    - db/schema.rb
+    - db/migrate/**/*
+    - node_modules/**/*
+    - public/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - log/**/*
+
+# Requires the following RuboCop extensions
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-capybara
+  - rubocop-factory_bot
+
+# Use nested module/class definitions instead of compact
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Missing top-level documentation comment
+Style/Documentation:
+  Enabled: false
+
+# Missing frozen string literal comment
+Style/FrozenStringLiteralComment:
+  Enabled: false

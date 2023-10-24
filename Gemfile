@@ -54,10 +54,10 @@ group :development, :test do
   gem 'lookbook'
 
   # Ruby static code analyzer
-  # gem 'rubocop', require: false
-  # gem 'rubocop-performance', require: false
-  # gem 'rubocop-rails', require: false
-  # gem 'rubocop-rspec', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
