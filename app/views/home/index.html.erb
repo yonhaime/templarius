@@ -7,4 +7,5 @@
     <li>Ruby 3.2.2</li>
   </ul>
   <%= render LabelComponent.new %>
+  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "text-gray-600 mr-6" %>
 </div>

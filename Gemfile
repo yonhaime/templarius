@@ -26,7 +26,7 @@ gem 'turbo-rails'
 gem 'view_component'
 
 # Authentication solution
-# gem 'devise'
+gem 'devise', github: 'heartcombo/devise'
 
 # For roles management
 # gem 'rolify'
